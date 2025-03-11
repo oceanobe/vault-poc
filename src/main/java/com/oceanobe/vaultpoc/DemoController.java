@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    @Value("${test}")
-    private String test;
+    @Value("${api-key}")
+    private String apiKey;
 
-    @GetMapping("/vault")
+    @GetMapping("/payment")
     public String getVaultSecrets() {
-        return "Test: " + test;
+        return "API Key: " + apiKey;
     }
 }
